@@ -636,9 +636,9 @@ public class PrintSocketClient {
 
     private boolean allowedFromDialog(RequestState request, String prompt, Point position) {
         //If cert can be resolved before the lock, do so and return
-        if (request.hasBlockedCert()) {
-            return false;
-        }
+//         if (request.hasBlockedCert()) {
+//             return false;
+//         }
         if (request.hasSavedCert()) {
             return true;
         }
