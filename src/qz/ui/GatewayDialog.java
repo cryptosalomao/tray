@@ -83,7 +83,7 @@ public class GatewayDialog extends JDialog implements Themeable {
 
         bottomPanel = new JPanel();
         bottomPanel.setLayout(new FlowLayout(FlowLayout.CENTER, 10, 5));
-        persistentCheckBox = new JCheckBox("Remember this decision", false);
+        persistentCheckBox = new JCheckBox("Remember this decision", true);
         persistentCheckBox.setMnemonic(KeyEvent.VK_R);
         persistentCheckBox.addActionListener(e -> allowButton.setEnabled(true));
         persistentCheckBox.setAlignmentX(RIGHT_ALIGNMENT);
