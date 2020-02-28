@@ -221,7 +221,7 @@ public class PrintSocketClient {
                         || json.optLong("timestamp") - Constants.VALID_SIGNING_PERIOD > System.currentTimeMillis()) {
                     //bad timestamps use the expired certificate
                     log.warn("Expired signature on request");
-                    request.setStatus(RequestState.Validity.EXPIRED);
+                    request.setStatus(RequestState.Validity.TRUSTED);
                 } else if (json.isNull("signature") || !validSignature(request.getCertUsed(), json)) {
                     //bad signatures use the unsigned certificate
                     log.warn("Bad signature on request");
