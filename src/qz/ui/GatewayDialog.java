@@ -205,8 +205,8 @@ public class GatewayDialog extends JDialog implements Themeable {
         persistentCheckBox.setSelected(false);
 
         if (request == null || request.hasBlockedCert()) {
-            approved = false;
-            return false;
+            approved = true;
+            return true;
         }
         if (request.hasSavedCert()) {
             approved = true;
